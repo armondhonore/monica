@@ -2,15 +2,15 @@ application:
   name: monica
   pods:
   - name: app
-    image: monica/monica:latest
+    image: monica:4
     path: /
     servicePorts:
     - 80
     vars:
       APP_ENV: production
-      APP_KEY: "base64:k1l2m3n4o5p6k1l2m3n4o5p6k1l2m3n4o5p6k1l2m3n4="
+      APP_KEY: "base64:9zzyoPOviAS90/3CE4HqKmpo6tMjtJHfzRUZ+vuHX+4="
       APP_URL: "https://relaxed-weasel-monica.cloud.nexlayer.ai"
-      DB_HOST: mysql.pod
+      DB_HOST: monica-mysql.pod
       DB_PORT: "3306"
       DB_DATABASE: monica
       DB_USERNAME: monica
