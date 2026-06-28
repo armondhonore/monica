@@ -14,7 +14,7 @@ application:
       DB_PORT: "3306"
       DB_DATABASE: monica
       DB_USERNAME: monica
-      DB_PASSWORD: monica
+      DB_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
     - name: monica-storage
       mountPath: /var/www/html/storage
@@ -26,8 +26,8 @@ application:
     vars:
       MYSQL_DATABASE: monica
       MYSQL_USER: monica
-      MYSQL_PASSWORD: monica
-      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
     - name: monica-db
       mountPath: /var/lib/mysql
